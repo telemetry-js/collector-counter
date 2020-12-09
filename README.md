@@ -3,7 +3,7 @@
 > **Collect metrics from a counter incremented by you.**  
 > A [`telemetry`](https://github.com/telemetry-js/telemetry) plugin.
 
-[![npm status](http://img.shields.io/npm/v/telemetry-js/collector-counter.svg)](https://www.npmjs.org/package/@telemetry-js/collector-counter)
+[![npm status](http://img.shields.io/npm/v/@telemetry-js/collector-counter.svg)](https://www.npmjs.org/package/@telemetry-js/collector-counter)
 [![node](https://img.shields.io/node/v/@telemetry-js/collector-counter.svg)](https://www.npmjs.org/package/@telemetry-js/collector-counter)
 [![Test](https://github.com/telemetry-js/collector-counter/workflows/Test/badge.svg?branch=main)](https://github.com/telemetry-js/collector-counter/actions)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -101,9 +101,9 @@ Options:
 
 - `unit`: string, defaults to `count`
 - `statistic`: string, defaults to `sum`
-- Other options are passed as-is to `telemetry-metric`.
+- Other options are passed as-is to [`metric`](https://github.com/telemetry-js/metric).
 
-Metrics created by `.delta` get a `.statistic = 'sum'` property. Using this information, the `telemetry-publisher-appoptics` plugin will set the `summarize_function` parameter for you, which tells AppOptics to sum (rather than average) values when rolling up high-resolution measurements. No such behavior exists in CloudWatch and by extension the `telemetry-publisher-cloudwatch` plugin.
+Metrics created by `.delta` get a `.statistic = 'sum'` property. Using this information, the [`publisher-appoptics`](https://github.com/telemetry-js/publisher-appoptics) plugin will set the `summarize_function` parameter for you, which tells AppOptics to sum (rather than average) values when rolling up high-resolution measurements. No such behavior exists in CloudWatch and by extension the [`publisher-cloudwatch`](https://github.com/telemetry-js/publisher-cloudwatch) plugin.
 
 ### `plugin = counter.persistent(metricName, options)`
 
@@ -113,7 +113,7 @@ Options:
 
 - `unit`: string, defaults to `count`
 - `statistic`: string, defaults to `average`
-- Other options are passed as-is to `telemetry-metric`.
+- Other options are passed as-is to [`metric`](https://github.com/telemetry-js/metric).
 
 ### `plugin = counter.rate(metricName, options)`
 
@@ -123,7 +123,7 @@ Options:
 
 - `unit`: string, defaults to `count/second`
 - `statistic`: string, defaults to `average`
-- Other options are passed as-is to `telemetry-metric`.
+- Other options are passed as-is to [`metric`](https://github.com/telemetry-js/metric).
 
 ### `plugin`
 
@@ -152,7 +152,7 @@ npm install @telemetry-js/collector-counter
 
 ## Acknowledgements
 
-This project is kindly sponsored by [Reason Cybersecurity Inc](https://reasonsecurity.com).
+This project is kindly sponsored by [Reason Cybersecurity Ltd](https://reasonsecurity.com).
 
 [![reason logo](https://cdn.reasonsecurity.com/github-assets/reason_signature_logo.png)](https://reasonsecurity.com)
 
